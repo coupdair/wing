@@ -1,8 +1,6 @@
 
-module inside_sphere()
+module inside_sphere(r,h)
 {
-  r=54/2;
-  h=3;
 /**/
   difference()
   {
@@ -15,5 +13,7 @@ module inside_sphere()
 /**/
 }
 
-inside_sphere();
+r=54/2;
+h=3;
+inside_sphere(r,h);
 
