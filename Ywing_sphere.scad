@@ -20,7 +20,7 @@ module outside_sphere(t,r,h)
 
 module attach_sphere(t,r,h)
 {
-  n=5
+  n=4;
   for (i = [0:n-1])
   {
     translate([r*sin(360*i/n), r*cos(360*i/n), -h+t/2])
@@ -38,7 +38,7 @@ module nut_sphere(t,r,h)
 }
 
 r=54/2;
-h=30;
-t=4;
+t=3;
+h=t+3;
 nut_sphere(t,r,h);
 attach_sphere(t,r,h);
