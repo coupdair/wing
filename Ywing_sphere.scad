@@ -47,7 +47,7 @@ module attach_cylinder(t,r,h,hh)
 
 module attach_sphere(t,r,h)
 {
-  attach_cylinder(t,r,h,t)
+  attach_cylinder(t,r,h,t);
 }
 
 module nut_sphere(t,r,h)
