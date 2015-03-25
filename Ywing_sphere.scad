@@ -18,12 +18,16 @@ module outside_sphere(t,r,h)
   inside_sphere(r+t,h);
 }
 
+module nut_sphere(t,r,h)
+{
+  difference()
+  {
+    outside_sphere(t,r,h);
+    inside_sphere(r,h);
+  }//diff
+}
 
 r=54/2;
-h=3;
+h=30;
 t=4;
-difference()
-{
-  outside_sphere(t,r,h);
-  inside_sphere(r,h);
-}
+nut_sphere(t,r,h);
