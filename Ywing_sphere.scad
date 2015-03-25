@@ -19,7 +19,7 @@ module outside_sphere(t,r,h)
   for (i = [0:5])
   {
     translate([r*sin(360*i/6), r*cos(360*i/6), -h])
-      cube(t, center=true);
+      cylinder(h=t, r=t*2, center=true);
   }
 }
 
