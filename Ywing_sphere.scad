@@ -16,7 +16,11 @@ module inside_sphere(r,h)
 module outside_sphere(t,r,h)
 {
   inside_sphere(r+t,h);
-  translate([r, 0, -h]) cube(t, center=true);
+  for (i = [0:5])
+  {
+    translate([r*sin(360*i/6), r*cos(360*i/6), -h])
+      cube(t, center=true);
+  }
 }
 
 module nut_sphere(t,r,h)
