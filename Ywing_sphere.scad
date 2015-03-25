@@ -35,16 +35,6 @@ module outside_sphere(t,r,h)
   }
 }
 
-module attach_sphere(t,r,h)
-{
-  n=4;
-  for (i = [0:n-1])
-  {
-    translate([r*sin(360*i/n), r*cos(360*i/n), -h+t/2])
-      cylinder(h=t, r=t, center=true);
-  }
-}
-
 module attach_cylinder(t,r,h,hh)
 {
   n=4;
@@ -53,6 +43,11 @@ module attach_cylinder(t,r,h,hh)
     translate([r*sin(360*i/n), r*cos(360*i/n), -h+t/2])
       cylinder(h=hh, r=t, center=true);
   }
+}
+
+module attach_sphere(t,r,h)
+{
+  attach_cylinder(t,r,h,t)
 }
 
 module nut_sphere(t,r,h)
