@@ -19,9 +19,10 @@ module outside_sphere(t,r,h)
 }
 
 module attach_sphere(t,r,h)
+{
   for (i = [0:5])
   {
-    translate([r*sin(360*i/6), r*cos(360*i/6), -h-t/2])
+    translate([r*sin(360*i/6), r*cos(360*i/6), -h+t/2])
       cylinder(h=t, r=t, center=true);
   }
 }
