@@ -13,7 +13,17 @@ module inside_sphere(r,h)
 /**/
 }
 
+module outside_sphere(t,r,h)
+{
+  inside_sphere(r+t,h);
+}
+
+
 r=54/2;
 h=3;
-inside_sphere(r,h);
-
+t=4;
+difference()
+{
+  outside_sphere(t,r,h);
+  inside_sphere(r,h);
+}
