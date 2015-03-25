@@ -18,8 +18,8 @@ module outside_sphere(t,r,h)
   inside_sphere(r+t,h);
   for (i = [0:5])
   {
-    translate([r*sin(360*i/6), r*cos(360*i/6), -h])
-      cylinder(h=t, r=t*2, center=true);
+    translate([r*sin(360*i/6), r*cos(360*i/6), -h-t/2])
+      cylinder(h=t, r=t, center=true);
   }
 }
 
