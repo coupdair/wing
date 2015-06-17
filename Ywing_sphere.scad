@@ -67,7 +67,11 @@ difference()
 {
   union()
   {
-    nut_sphere(t,r,h);
+    difference()
+    {
+      nut_sphere(t,r,h);
+      translate([-30,-30,5]) cube(60);
+    }
     attach_sphere(t,r,h);
   }//union
   translate([0,0,-0.01])//0.01 for limits
