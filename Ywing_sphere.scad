@@ -60,7 +60,7 @@ module nut_sphere(t,r,h)
   }//diff
 }
 
-r=54/2;
+r=45/2;
 t=3;
 h=t+3;
 difference()
